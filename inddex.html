@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro meu neném fofo</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Quer passar o resto da sua vida comigo, neném?</h2>
+        <button class="btn" onclick="sim()">SIIMMM</button>
+        <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO :(</button>
+    </div>
+</body>
+<STYle>
+    #conteudo {
+        BACKGROUND: LIGHTSTEELBLUE;
+        WIDTH: 100%;
+        HEIGHT: 100%;
+        POSITION: FIXED;
+        TOP: 0;
+        LEFT: 0;
+        PADDING: 10PX;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        background: darkblue;
+        color: white;
+        border: none;
+        padding: 20px;
+        width: 100px;
+        border-radius: 10px;
+    }
+</STYle>
+<script>
+    function sim() {
+        alert("Que bom, meu amor!! Quero fazer de você a mulher mais feliz desse mundo.")
+    }
+
+    function desvia(t) {
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log("opa, desviei...")
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+
+
+
+</script>
+
+</html>
